@@ -1,47 +1,40 @@
 ---
 sidebar_position: 1
+title: Welcome to Skill17
 ---
 
-# Tutorial Intro
+# Welcome to Skill17
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Skill17** is a web technologies learning platform built around the [WorldSkills occupational standards](https://worldskills.org/what/projects/wsos/2024/events/579/skills/1693/). Whether you're just starting out or looking to level up, this curriculum covers everything you need to become a professional web developer.
 
-## Getting Started
+## What You'll Learn
 
-Get started by **creating a new site**.
+Our program is structured around four core competency areas that mirror real-world web development:
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+| Area | Weight | Focus |
+|------|--------|-------|
+| Design Implementation | 25% | Visual design, responsive layouts, accessibility |
+| Front-End Development | 25% | JavaScript, frameworks, testing, deployment |
+| Back-End Development | 40% | Server-side code, databases, APIs, security |
+| Professional Skills | 10% | Project management, communication, problem solving |
 
-### What you'll need
+## Who Is This For?
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Students exploring web development for the first time
+- Self-taught developers who want structured, standards-based learning
+- Anyone preparing for WorldSkills Web Technologies competitions
 
-## Generate a new site
+## How to Use This Site
 
-Generate a new Docusaurus site using the **classic template**.
+Browse the **Curriculum** sections in the sidebar to explore topics. Each section includes learning objectives and practical exercises.
 
-The classic template will automatically be added to your project after you run the command:
+## Prerequisites
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+To follow along with the exercises you'll need:
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- A modern web browser (Chrome, Firefox, or Edge)
+- A code editor ([VS Code](https://code.visualstudio.com/) recommended)
+- [Node.js](https://nodejs.org/) version 18 or above
+- Basic familiarity with using a terminal
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Ready? Pick a topic from the sidebar and start building.
