@@ -1,23 +1,249 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
+  padding: 6rem 2rem 4rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--skill17-gradient);
+  color: #fff;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(116, 185, 255, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  position: relative;
+}
+
+.heroSubtitle {
+  font-size: 1.35rem;
+  font-weight: 400;
+  opacity: 0.92;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  position: relative;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.heroButton {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px !important;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.heroButton:hover {
+  background: rgba(255, 255, 255, 0.35) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  color: #fff !important;
+}
+
+.heroButtonPrimary {
+  background: #fff !important;
+  color: #6c5ce7 !important;
+  border: none !important;
+}
+
+.heroButtonPrimary:hover {
+  background: #fff !important;
+  color: #5a48e3 !important;
+}
+
+/* Stats bar */
+.statsBar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2.5rem 1rem;
+  background: var(--skill17-card-bg);
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--skill17-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Competency section */
+.competencySection {
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: var(--skill17-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.competencyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.competencyCard {
+  background: var(--skill17-card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competencyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .competencyCard:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.competencyIcon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.competencyTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.competencyPercent {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.competencyDesc {
+  color: var(--skill17-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA section */
+.ctaSection {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: var(--skill17-gradient);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.ctaText {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .competencyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsBar {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .statNumber {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .statsBar {
+    gap: 1rem;
+  }
 }

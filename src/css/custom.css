@@ -1,30 +1,97 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Skill17 - Modern student-oriented theme
+ * Vibrant color palette with clean typography
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #6c5ce7;
+  --ifm-color-primary-dark: #5a48e3;
+  --ifm-color-primary-darker: #5140e1;
+  --ifm-color-primary-darkest: #3628c9;
+  --ifm-color-primary-light: #7e70eb;
+  --ifm-color-primary-lighter: #877aed;
+  --ifm-color-primary-lightest: #a89ff2;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-weight-bold: 600;
+  --docusaurus-highlighted-code-line-bg: rgba(108, 92, 231, 0.1);
+  --ifm-border-radius: 12px;
+  --skill17-gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 50%, #74b9ff 100%);
+  --skill17-card-bg: #f8f9ff;
+  --skill17-text-muted: #636e72;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #a29bfe;
+  --ifm-color-primary-dark: #8b82fe;
+  --ifm-color-primary-darker: #7d73fd;
+  --ifm-color-primary-darkest: #4f42fd;
+  --ifm-color-primary-light: #b9b4fe;
+  --ifm-color-primary-lighter: #c7c3fe;
+  --ifm-color-primary-lightest: #eeedff;
+  --docusaurus-highlighted-code-line-bg: rgba(162, 155, 254, 0.15);
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --skill17-card-bg: #161b22;
+  --skill17-text-muted: #8b949e;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better navbar */
+.navbar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(13, 17, 23, 0.85);
+}
+
+.navbar__title {
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+/* Footer styling */
+.footer {
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+[data-theme='dark'] .footer {
+  background: #0d1117;
+}
+
+/* Better code blocks */
+pre {
+  border-radius: 12px !important;
+}
+
+/* Links */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+/* Better buttons */
+.button--primary {
+  background: var(--skill17-gradient);
+  border: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 92, 231, 0.3);
 }
