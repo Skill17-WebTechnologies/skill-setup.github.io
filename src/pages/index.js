@@ -39,22 +39,23 @@ function HomepageHeader() {
     <header className={styles.heroBanner}>
       <div className="container">
         <Heading as="h1" className={styles.heroTitle}>
-          Become a Web Developer
+          Your Path to WorldSkills Web Developer
         </Heading>
         <p className={styles.heroSubtitle}>
           Master modern web technologies through hands-on learning based on
-          international WorldSkills standards. From design to deployment.
+          international WorldSkills standards. Whether you're a student or
+          teacher, we have a path for you.
         </p>
         <div className={styles.buttons}>
           <Link
             className={clsx('button button--lg', styles.heroButtonPrimary, styles.heroButton)}
-            to="/docs/intro">
-            Start Learning
+            to="/learning-path">
+            I'm a Student
           </Link>
           <Link
             className={clsx('button button--lg', styles.heroButton)}
-            to="/docs/intro">
-            View Curriculum
+            to="/teachers">
+            I'm a Teacher
           </Link>
         </div>
       </div>
@@ -66,20 +67,20 @@ function StatsBar() {
   return (
     <div className={styles.statsBar}>
       <div className={styles.statItem}>
-        <div className={styles.statNumber}>4</div>
-        <div className={styles.statLabel}>Core Areas</div>
+        <div className={styles.statNumber}>60+</div>
+        <div className={styles.statLabel}>Countries</div>
       </div>
       <div className={styles.statItem}>
-        <div className={styles.statNumber}>17+</div>
-        <div className={styles.statLabel}>Skill Modules</div>
+        <div className={styles.statNumber}>1,400+</div>
+        <div className={styles.statLabel}>Competitors</div>
+      </div>
+      <div className={styles.statItem}>
+        <div className={styles.statNumber}>47</div>
+        <div className={styles.statLabel}>Editions</div>
       </div>
       <div className={styles.statItem}>
         <div className={styles.statNumber}>100%</div>
         <div className={styles.statLabel}>Hands-On</div>
-      </div>
-      <div className={styles.statItem}>
-        <div className={styles.statNumber}>WorldSkills</div>
-        <div className={styles.statLabel}>Standard</div>
       </div>
     </div>
   );
@@ -117,13 +118,20 @@ function CTASection() {
         Ready to Build the Web?
       </Heading>
       <p className={styles.ctaText}>
-        Join Skill17 and start your journey toward becoming a professional web developer.
+        Follow the learning path and start your journey toward WorldSkills.
       </p>
-      <Link
-        className={clsx('button button--lg', styles.heroButtonPrimary, styles.heroButton)}
-        to="/docs/intro">
-        Get Started Now
-      </Link>
+      <div className={styles.buttons}>
+        <Link
+          className={clsx('button button--lg', styles.heroButtonPrimary, styles.heroButton)}
+          to="/learning-path">
+          Start the Learning Path
+        </Link>
+        <Link
+          className={clsx('button button--lg', styles.heroButton)}
+          to="/competition">
+          Competition Info
+        </Link>
+      </div>
     </section>
   );
 }

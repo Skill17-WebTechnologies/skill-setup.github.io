@@ -61,10 +61,20 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'dropdown',
+            label: 'For Students',
             position: 'left',
-            label: 'Curriculum',
+            items: [
+              {label: 'Learning Path', to: '/learning-path'},
+              {label: 'Competition Info', to: '/competition'},
+              {label: 'Resources', to: '/resources'},
+              {type: 'docSidebar', sidebarId: 'tutorialSidebar', label: 'Curriculum'},
+            ],
+          },
+          {
+            label: 'For Teachers',
+            to: '/teachers',
+            position: 'left',
           },
           {
             href: 'https://github.com/Skill17-WebTechnologies/skill-setup.github.io',
@@ -77,30 +87,26 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Learn',
+            title: 'For Students',
             items: [
-              {
-                label: 'Curriculum',
-                to: '/docs/intro',
-              },
+              {label: 'Learning Path', to: '/learning-path'},
+              {label: 'Competition Info', to: '/competition'},
+              {label: 'Resources', to: '/resources'},
+              {label: 'Curriculum', to: '/docs/intro'},
+            ],
+          },
+          {
+            title: 'For Teachers',
+            items: [
+              {label: 'Coaching Guide', to: '/teachers'},
+              {label: 'Curriculum Mapping', to: '/teachers#curriculum-mapping'},
             ],
           },
           {
             title: 'Community',
             items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/Skill17-WebTechnologies/skill-setup.github.io',
-              },
-            ],
-          },
-          {
-            title: 'Reference',
-            items: [
-              {
-                label: 'WorldSkills Standards',
-                href: 'https://worldskills.org/what/projects/wsos/2024/events/579/skills/1693/',
-              },
+              {label: 'GitHub', href: 'https://github.com/Skill17-WebTechnologies/skill-setup.github.io'},
+              {label: 'WorldSkills Standards', href: 'https://worldskills.org/what/projects/wsos/2024/events/579/skills/1693/'},
             ],
           },
         ],
